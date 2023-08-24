@@ -2,6 +2,10 @@
 
 Payfast is a Ruby gem that simplifies the process of integrating the PayFast payment gateway into your Ruby on Rails application. It provides a generator that helps scaffold the necessary configuration, routes, models, and controllers required to integrate PayFast seamlessly.
 
+## Demo 
+![Peek 2023-08-24 12-15](https://github.com/mactunechy/payfast/assets/37017264/270cf0ab-d453-43ca-9a9a-8b8195dc6b8f)
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
