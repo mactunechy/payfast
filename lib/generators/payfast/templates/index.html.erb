@@ -1,0 +1,11 @@
+<form action="/carts" method="POST">
+<!-- uncomment this and surround this erb tags -->
+<!--  hidden_field_tag :authenticity_token, form_authenticity_token -->
+<input type="hidden" name="authenticity_token" >
+<input type="hidden" name="cart[amount]" value="500">
+<input type="hidden" name="cart[email_address]" value="test@test.com">
+<input type="hidden" name="cart[item_name]" value="test item">
+
+<p>Item R500 </p>
+<input type="submit" name="commit" value="Pay" data-disable-with="Pay">
+</form>

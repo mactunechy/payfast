@@ -1,0 +1,15 @@
+
+<script>
+// set the uuid to  uuid = @cart.payment_uuid  wrap @carts.payment_uuid with erb tags
+const uuid = ``
+window.payfast_do_onsite_payment({uuid}, function (result) {
+  if (result === true) {
+    // wrap success_cart_path(@cart) with erb tags and paste into the literal below
+    window.location.href = ``
+  }
+  else {
+    // Redirect to  failure_cart_path(@cart) with erb tags and paste into the literal below
+    window.location.href = ``
+  }
+});
+</script>

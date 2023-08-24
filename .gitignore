@@ -1,0 +1,50 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+
+# Ignore other generated files
+Gemfile.lock
+coverage/
+
+# Ignore application specific files
+/config/application.yml
+
+# Ignore compiled assets
+/public/assets
+
+# Ignore environment-specific files
+/config/environments/development.rb
+/config/environments/test.rb
+/config/environments/production.rb
+
+# Ignore development specific files
+*.swp
+
+# Ignore Mac DS_Store files
+.DS_Store
+
+# Ignore other system files
+Thumbs.db
+
+# Ignore generated RDoc documentation
+/doc/
+
+# Ignore IDE files
+.idea/
+
+# Ignore RubyMine configuration
+/.idea
+/.idea/workspace.xml
+/.idea/tasks.xml
+/.idea/dictionaries
+
+# builds
+*payfast*.gem
