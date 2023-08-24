@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name = "payfast"
-  s.version = "1.0.4"
+  s.version = "1.0.5"
   s.author = "Dellan Muchengapadare"
   s.email = "mactunechy@gmail.com"
   s.homepage = "https://github.com/mactunechy/payfast-gem"
