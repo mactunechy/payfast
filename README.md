@@ -1,17 +1,3 @@
-
-Run rails g payfast:install
-
-run rails db:migrate
-
-# config
- run EDITOR="code --wait" bin/rails credentials:edit 
- read payfast.yml comments
-
-# templates
-- update make_payments template
-- read comments
-
-
 # PayfastGem
 
 PayfastGem is a Ruby gem that simplifies the process of integrating the PayFast payment gateway into your Ruby on Rails application. It provides a generator that helps scaffold the necessary configuration, routes, models, and controllers required to integrate PayFast seamlessly.
