@@ -13,12 +13,6 @@ Add this line to your application's Gemfile:
 ```bash
     bundle add payfast
 ```
-Or install it yourseld as:
-
-
-```bash
-    gem install payfast
-```
 
 ## Usage
 
