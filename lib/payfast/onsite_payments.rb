@@ -1,17 +1,16 @@
-require "net/http"
-require "uri"
+require 'net/http'
+require 'uri'
 
 module Payfast
+  # Encaspulates the  utils for makeing payfast payments using their onsite feature
   class OnsitePayments
     def self.generate_signature(payload)
       passphrase = Rails.application.config_for(:payfast).passphrase
 
-      if passphrase
-        payload[:passphrase] = passphrase
-      end
+      payload[:passphrase] = passphrase if passphrase
 
       url_encoded = data_to_string(payload)
-      create_hash(url_encoded, "md5")
+      create_hash(url_encoded, 'md5')
     end
 
     def self.requestPayment(payload)
@@ -20,7 +19,7 @@ module Payfast
         merchant_key: Rails.application.config_for(:payfast).merchant_key,
         return_url: Rails.application.config_for(:payfast).return_url,
         cancel_url: Rails.application.config_for(:payfast).cancel_url,
-        notify_url: Rails.application.config_for(:payfast).notify_url,
+        notify_url: Rails.application.config_for(:payfast).notify_url
       }.merge(payload)
 
       puts payload_with_config
@@ -35,7 +34,7 @@ module Payfast
 
       uri = URI.parse(base_url)
       http = Net::HTTP.new(uri.host, uri.port)
-      http.use_ssl = true if uri.scheme == "https"
+      http.use_ssl = true if uri.scheme == 'https'
 
       request = Net::HTTP::Post.new(uri.path)
       request.body = pf_param_string
@@ -45,11 +44,9 @@ module Payfast
         JSON.parse(response.body)
       rescue StandardError => e
         puts "Error: #{e.message}"
-        return false
+        false
       end
     end
-
-    private
 
     def self.data_to_string(payload)
       URI.encode_www_form(payload)
