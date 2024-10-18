@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.description = File.read(File.join(File.dirname(__FILE__), 'README.md'))
   s.licenses = ['MIT']
 
-  spec.required_ruby_version = '>= 2.7.0'
+  s.required_ruby_version = '>= 2.7.0'
 
   s.files = Dir['{bin,lib,spec}/**/*'] + ['LICENSE', 'README.md']
   s.executables = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
